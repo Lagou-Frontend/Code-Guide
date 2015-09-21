@@ -324,14 +324,15 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="html_img">
 ### 图片元素
 </a>
-图片元素img，需增加alt属性，这样当图片文件没有加载出来或用户有阅读障碍时，都不会影响⽤户使⽤。
+* 图片元素img，需增加alt属性，这样当图片文件没有加载出来或用户有阅读障碍时，都不会影响⽤户使⽤；
+* 也需增加width，height属性，设置这些属性可以在页面加载时为图片留出空间。如果没有设置这些属性，当图片加载时，页面的布局就会发生变化。但是，仍然需要额外设置图片元素css的height和width属性，如果不设置，当图片链接失效时，图片并不会占据你在标签中声明的大小区域，从而出现布局的混乱。
 
 ```html
 <!-- bad -->
 <img class="logo" />
 
 <!-- good -->
-<img class="logo" alt="logo" />
+<img class="logo" alt="logo" width="40px" height="40px" />
 ```
 
 <a name="html_formItem">

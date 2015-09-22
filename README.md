@@ -14,8 +14,8 @@
 * [减少标签数量](#html_reduceTagsCount)
 * [正确嵌套标签](#html_nestTagCorrectly)
 * [语义化](#html_semantic)
-* [图片元素](#html_img)
-* [表单元素](#html_formItem)
+* [图片](#html_img)
+* [表单](#html_formItem)
 * [JS生成标签](#html_jsCreatsTag)
 
 [CSS/LESS](#cl)
@@ -322,8 +322,9 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 ```
 
 <a name="html_img">
-### 图片元素
+### 图片
 </a>
+
 * 图片元素img，需增加alt属性，这样当图片文件没有加载出来或用户有阅读障碍时，都不会影响⽤户使⽤；
 * 也需增加width，height属性，设置这些属性可以在页面加载时为图片留出空间。如果没有设置这些属性，当图片加载时，页面的布局就会发生变化。但是，仍然需要额外设置图片元素css的height和width属性，如果不设置，当图片链接失效时，图片并不会占据你在标签中声明的大小区域，从而出现布局的混乱。
 
@@ -336,25 +337,48 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 ```
 
 <a name="html_formItem">
-### 表单元素
+### 表单
 </a>
-请将表单元素与label标签结合使用，用label标签的for属性关联表单元素的id，这样当点击label标签时，对应的表单元素也同样获得焦点，以提升用户体验。
 
-```html
-<!-- bad -->
-<form>
-	<span>Username</span>
-	<input name="username" type="text" />
-	<input type="submit" />
-</form>
+* 如果表单元素有对应的文本说明，请将表单元素与label标签结合使用，用label标签的for属性关联表单元素的id，这样当点击label标签时，对应的表单元素也同样获得焦点，以提升用户体验。
 
-<!-- good -->
-<form>
-	<label for="username">Username</label>
-	<input id="username" name="username" type="text" />
-	<input type="submit" />
-</form>
-```
+	```html
+	<!-- bad -->
+	<form method="post">
+		<span>Username</span>
+		<input name="username" type="text" />
+		<input type="submit" />
+	</form>
+	
+	<!-- good -->
+	<form method="post">
+		<label for="username">Username</label>
+		<input id="username" name="username" type="text" />
+		<input type="submit" />
+	</form>
+	```
+* 为button指定type属性值，button的type属性默认值为```submit```，为了保证使用时不出问题，请在任何情况下，为button指定type属性的值。
+
+	```html
+	<!-- bad -->
+	<button>Click</button>
+	
+	<!-- good -->
+	<button type="button">Click</button>
+	```
+* 为form指定method属性值为```post```，这是因为form的默认提交方式为get，另外如果表单是通过ajax异步提交的，请设置action属性值为```javascript:;```，以避免在js发成错误时，提交到当前页面。
+
+	```html
+	<!-- bad -->
+	<form>
+	    ...
+	</formn>
+	
+	<!-- good -->
+	<form method="post" action="javascript:;">
+	    ...
+	</formn>
+	```
 
 <a name="html_jsCreatsTag">
 ### JS生成标签

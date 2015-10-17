@@ -54,6 +54,12 @@
 * [undefined](#js_undefined)
 * [其他](#js_other)
 
+[移动端相关](#mobile)
+
+* [缩进](#mobile_meta)
+
+
+
 <a name="html">
 ## HTML
 </a>
@@ -1319,3 +1325,101 @@ if (typeof person === 'undefined') {
 	//good
 	var str = [ '123', '234', '345', '456', '567' ].join('');
 	```
+
+
+<a name="mobile">
+## 移动端相关
+</a>
+
+<a name="mobile_meta">
+### meta
+</a>
+
+建议移动端head使用如下meta设置
+
+* viewport 设置视窗宽为设备宽度，默认不缩放，不允许用户缩放。
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+```
+
+* 忽略电话号码和邮箱识别
+
+```
+<meta name="format-detection" content="telphone=no, email=no" />
+```
+
+* iOS隐藏工具栏和菜单栏
+
+```
+<meta name="apple-mobile-web-app-capable" content="yes" />
+```
+
+* iOS顶部状态栏(手机信号、时间、电池)的背景颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）
+
+```
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+```
+
+<a name="mobile_css">
+### CSS
+</a>
+
+* 字体设置
+
+```
+body { 
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; 
+}
+```
+
+* 盒模型
+
+```
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+```
+
+* 上下拉动滚动条时卡顿、慢
+
+```
+E {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+```
+P.S. 本条及以下的E均代表选择器
+
+* 禁止复制、选中文本
+
+```
+E {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+     user-select: none;
+}
+```
+
+* 长时间按住页面出现闪退
+
+```
+E {
+    -webkit-touch-callout: none;
+}
+```
+当你触摸并按住触摸目标时候，禁止或显示系统默认菜单
+
+* 动画定义3D启用硬件加速
+
+```
+E {
+    -webkit-transform:translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0);
+}
+```
+注意：3D变形会消耗更多的内存与功耗
+

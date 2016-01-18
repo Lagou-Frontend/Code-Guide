@@ -1315,16 +1315,6 @@ if (typeof person === 'undefined') {
 	    b = 0.2;
 	var c = a + b;
 	```
-* 不要通过'+'来拼接大量的字符串
-
-	```javascript
-	
-	// not good
-	var str = '123' + '234' + '345' + '456' + '567';
-	
-	//good
-	var str = [ '123', '234', '345', '456', '567' ].join('');
-	```
 
 
 <a name="mobile">

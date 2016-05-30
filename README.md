@@ -1336,7 +1336,7 @@ if (typeof person === 'undefined') {
 * 忽略电话号码和邮箱识别
 
 ```
-<meta name="format-detection" content="telphone=no, email=no" />
+<meta name="format-detection" content="telephone=no, email=no" />
 ```
 
 * iOS隐藏工具栏和菜单栏

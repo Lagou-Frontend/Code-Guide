@@ -98,6 +98,7 @@
 <a name="html_doctype">
 ### HTML5 doctype
 </a>
+
 在页面开头使用这个简单的doctype来启用标准模式，使其在每个浏览器中尽可能有一致的展现；<br />
 虽然doctype不区分大小写，但是按照惯例，doctype大写。
 
@@ -111,6 +112,7 @@
 <a name="html_lang">
 ### lang属性
 </a>
+
 根据HTML5规范：
 >应在html标签上加上lang属性。这会给语音工具和翻译工具以帮助，告诉它们应当怎么去发音和翻译。
 
@@ -126,6 +128,7 @@
 <a name="html_charset">
 ### 字符编码
 </a>
+
 通过明确声明字符编码，能够确保浏览器快速并容易的判断页面内容的渲染方式。这样做的好处是，可以避免在 HTML 中使用字符实体标记（character entity），从而全部与文档编码一致（一般采用 UTF-8 编码）。
 
 ```html
@@ -155,6 +158,7 @@
 <a name="html_importJSCSS">
 ### 引入CSS, JS
 </a>
+
 根据HTML5规范, 通常在引入CSS和JS时不需要指明```type```，因为```text/css```和 ```text/javascript```分别是他们的默认值。
 HTML5 规范链接
 
@@ -183,10 +187,11 @@ HTML5 规范链接
 <a name="html_attrOrder">
 ### 属性顺序
 </a>
+
 属性应该按照特定的顺序出现以保证易读性；
 
-* class
 * id
+* class
 * name
 * data-*
 * src, for, type, href, value , max-length, max, min, pattern
@@ -208,6 +213,7 @@ id更加具体且应该尽量少使用，所以将它放在第二位。
 <a name="html_booleanAttr">
 ### boolean属性
 </a>
+
 boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；<br />
 
 更多内容可以参考 [WhatWG section on boolean attributes](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes)：
@@ -277,6 +283,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="html_nestTagCorrectly">
 ### 正确嵌套标签
 </a>
+
 标签应该被正确的嵌套：
 
 * 块级元素可以嵌套块级元素和行内元素；
@@ -303,6 +310,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="html_semantic">
 ### 语义化
 </a>
+
 语义化的使用HTML标签，根据HTML元素的本⾝⽤途来使⽤，如列表、段落，导航栏等；<br />
 另外也要注意相关的使用规则，比如一个页面应该只有1个h1标签;<br />
 标签的合理使用，能够保证良好的⽂档结构，便于开发者阅读和写出更加优雅的代码，也能够让浏览器的爬虫更好地解析。<br />
@@ -347,7 +355,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <img class="logo" />
 
 <!-- good -->
-<img class="logo" alt="logo" width="40px" height="40px" />
+<img class="logo" src="..." alt="logo" width="40px" height="40px" />
 ```
 
 <a name="html_formItem">
@@ -380,23 +388,24 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 	<!-- good -->
 	<button type="button">Click</button>
 	```
-* 为form指定method属性值为```post```，这是因为form的默认提交方式为get，另外如果表单是通过ajax异步提交的，请设置action属性值为```javascript:;```，以避免在js发成错误时，提交到当前页面。
+	* <s>为form指定method属性值为```post```，这是因为form的默认提交方式为get，另外如果表单是通过ajax异步提交的，请设置action属性值为```javascript:;```，以避免在js发成错误时，提交到当前页面。</s>
 
 	```html
 	<!-- bad -->
 	<form>
 	    ...
-	</formn>
+	</form>
 	
 	<!-- good -->
 	<form method="post" action="javascript:;">
 	    ...
-	</formn>
+	</form>
 	```
 
 <a name="html_jsCreatsTag">
 ### JS生成标签
 </a>
+
 在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
 
@@ -407,11 +416,13 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="cl_indent">
 ### 缩进
 </a>
+
 缩进使用4个空格。
 
 <a name="cl_semicolon">
 ### 分号
 </a>
+
 每个属性声明末尾都要加分号。
 
 ```css
@@ -423,6 +434,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="cl_blankSpace">
 ### 空格
 </a>
+
 以下几种情况不需要空格：
 
 * 多个规则的分隔符','前
@@ -491,7 +503,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 以下几种情况需要空行：
 
 * 文件最后保留一个空行([原因](http://segmentfault.com/q/1010000000614237/a-1020000000614285))
-* '}'后最好跟一个空行，包括less中嵌套的规则
+* <s>'}'后最好跟一个空行，包括less中嵌套的规则</s>
 * 属性之间需要适当的空行，具体见属性声明顺序
 
 ```css
@@ -523,15 +535,29 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <a name="cl_newline">
 ### 换行
 </a>
+
 以下几种情况不需要换行：
 
 * '{'前
+* 多个规则的分隔符','后
  
+```css
+/* bad */
+.selector, .dialog {
+    ...
+}
+
+/* good */
+.selector,
+.dialog {
+    ...
+}
+```
+
 以下几种情况需要换行：
 
 * '{'后和'}'前
 * 每个属性独占一行
-* 多个规则的分隔符','后
 
 ```css
 /* bad */
@@ -543,16 +569,6 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
     background-color: black;
 }
 
-/* bad */
-.selector, .dialog {
-    ...
-}
-
-/* good */
-.selector,
-.dialog {
-    ...
-}
 ```
 
 <a name="cl_quotes">
@@ -607,6 +623,7 @@ li[data-type="single"] {
 <a name="cl_attrOrder">
 ### 属性声明顺序
 </a>
+
 相关的属性声明应当归为一组，并按照下面的顺序排列：
 
 1. Positioning
@@ -652,8 +669,9 @@ li[data-type="single"] {
 <a name="cl_prefixAttr">
 ### 带前缀的属性
 </a>
-当使用特定厂商的带有前缀的属性时，通过缩进的方式，让每个属性的值在垂直方向对齐，这样便于多行编辑;<br />
-另外无前缀的标准属性应该写在有前缀的属性后面。
+
+<s>当使用特定厂商的带有前缀的属性时，通过缩进的方式，让每个属性的值在垂直方向对齐，这样便于多行编辑;<br />
+	另外无前缀的标准属性应该写在有前缀的属性后面。</s>
 
 ```css
 /* Prefixed properties */
@@ -666,7 +684,8 @@ li[data-type="single"] {
 <a name="cl_color">
 ### 颜色
 </a>
-颜色16进制用小写字母；<br />
+
+<s>颜色16进制用小写字母；</s><br />
 颜色16进制尽量用简写。
 
 ```css
@@ -686,6 +705,7 @@ li[data-type="single"] {
 <a name="cl_shortAttr">
 ### 属性简写
 </a>
+
 属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，另外分开写有助于样式的组合，所以建议尽量分开声明会更加清晰；<br />
 margin，padding，border在大多数的情况下推荐使用简写，但是也不要滥用。
 
@@ -717,7 +737,8 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 <a name="cl_media">
 ### 媒体查询
 </a>
-尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
+
+尽量将媒体查询的规则统一放在在文档的最底部，如果规则较少可以将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，这样做只会让大家以后更容易忘记他们。
 
 ```css
 .selector {
@@ -742,28 +763,28 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 <a name="cl_less">
 ###LESS相关
 </a>
-声明顺序：
 
-1. 引入文件
-2. 声明变量
-3. 混合样式
-4. 嵌套规则
+<s>声明顺序：</s>
+	1. 引入文件
+	2. 声明变量
+	3. 混合样式
+	4. 嵌套规则
 
 @import引入的文件不需要结尾的'.less'；<br />
-less中的嵌套最多不超过3层；<br />
+尽量减少less中的嵌套，<s>最多不超过4层；</s><br />
 去掉不必要的父级引用符号'&'。
 
 ```less
 /* bad */
 .selector {
-    & > .dialog {
+    & .dialog {
         ...
     }
 }
 
 /* good */
 .selector {
-    > .dialog {
+    .dialog {
         ...
     }
 }
@@ -774,26 +795,29 @@ less中的嵌套最多不超过3层；<br />
 </a>
 
 * 不允许有空的规则；
-* 去掉小数点前面的0；
+* <s>去掉小数点前面的0</s>；
 * 属性值'0'后面不要加单位；
 * 不要在同个规则里出现重复的属性；
 * 不要在一个文件里出现两个相同的规则；
-* 不要通过import来引入css文件；
-* 尽量不使用'*'选择器；
-* 尽量不使用'!important'。
+* 尽量不要通过CSS的`@import`来引入css文件，而使用less的`@import (css)`引入；
+* 尽量不使用`*`选择器；
+* 尽量不使用`!important`;
+* 尽量不要同时使用reset.css和normalize.css。
 
 <a name="js">
-##JavaScript
+## JavaScript
 </a>
 
 <a name="js_indent">
 ### 缩进
 </a>
+
 缩进使用4个空格。
 
 <a name="js_semicolon">
 ### 分号
 </a>
+
 语句必须以分号结尾，这样可以避免语法错误和压缩错误，而且解析器也不必再分析语句为其添加分号从而提高了性能。
 
 ```javascript
@@ -805,6 +829,7 @@ if (x < y) {
 <a name="js_blankSpace">
 ### 空格
 </a>
+
 以下几种情况不需要空格：
 
 * 对象的属性名后
@@ -891,7 +916,7 @@ if (x < y) {
 	
 	}
 	```
-* 单行注释'//'后（若单行注释和代码同行，则'//'前也需要），多行注释'*'后
+* 单行注释'//'后（若单行注释和代码同行，则'//'前也需要），多行注释`*`后
  
 	```javascript
 	// comment
@@ -931,6 +956,7 @@ if (x < y) {
 <a name="js_blankLine">
 ### 空行
 </a>
+
 以下几种情况需要空行：
 
 * 注释前（当注释在代码块的第一行时，则无需空行）
@@ -952,6 +978,7 @@ var a = 1,
 <a name="js_quotes">	
 ### 引号
 </a>
+
 最外层统一使用单引号。
 
 ```javascript
@@ -1000,7 +1027,8 @@ var zhangsan = 'zhangsan'; // one space after code
 <a name="js_multiLineComment">
 ### 多行注释
 </a>
-最少三行，'*'后跟一个空格，建议在以下情况下使用：
+
+最少三行，`*`后跟一个空格，建议在以下情况下使用：
 
 * 难于理解的代码段
 * 可能存在错误的代码段
@@ -1017,6 +1045,7 @@ var x = 1;
 <a name="js_documentComment">
 ### 文档注释
 </a>
+
 各类标签@param, @method等请参考[usejsdoc](http://usejsdoc.org/)和[JSDoc Guide](http://yuri4ever.github.io/jsdoc/)，建议在以下情况下使用：
 
 * 所有常量
@@ -1149,6 +1178,7 @@ if (condition) {
 <a name="js_null">
 ### null
 </a>
+
 适用场景：
 
 * 初始化一个将来可能被赋值为对象的变量
@@ -1412,4 +1442,3 @@ E {
 }
 ```
 注意：3D变形会消耗更多的内存与功耗
-

@@ -60,7 +60,7 @@
 * [css](#mobile_css)
 
 
-## H<a name="html">TML</a>
+## <a name="html">HTML</a>
 
 ### <a name="html_syntax">语法</a>
 
@@ -379,7 +379,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
 
-## C<a name="cl">SS/LESS</a>
+## <a name="cl">CSS/LESS</a>
 
 ### <a name="cl_indent">缩进</a>
 
@@ -704,8 +704,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 }
 ```
 
-###L<a name="cl_less">ESS相关</a>
-
+### <a name="cl_less">LESS相关</a>
 <s>声明顺序：</s>
 	1. 引入文件
 	2. 声明变量
@@ -744,7 +743,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 * 尽量不使用`!important`;
 * 尽量不要同时使用reset.css和normalize.css。
 
-## J<a name="js">avaScript</a>
+## <a name="js">JavaScript</a>
 
 ### <a name="js_indent">缩进</a>
 
@@ -1253,7 +1252,7 @@ if (typeof person === 'undefined') {
 	```
 
 
-## 移<a name="mobile">动端相关</a>
+## <a name="mobile">移动端相关</a>
 
 ### <a name="mobile_meta">meta</a>
 

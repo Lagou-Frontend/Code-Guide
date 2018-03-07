@@ -526,7 +526,6 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
     color: red;
     background-color: black;
 }
-
 ```
 
 ### <a name="cl_quotes">引号</a>
@@ -705,6 +704,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 ```
 
 ### <a name="cl_less">LESS相关</a>
+
 <s>声明顺序：</s>
 	1. 引入文件
 	2. 声明变量
@@ -902,7 +902,7 @@ var a = 1,
     b = 2;
 ```
 
-### <a name="js_quotes">	引号</a>
+### <a name="js_quotes">引号</a>
 
 最外层统一使用单引号。
 

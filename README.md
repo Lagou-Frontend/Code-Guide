@@ -60,13 +60,9 @@
 * [css](#mobile_css)
 
 
-<a name="html">
-## HTML
-</a>
+## H<a name="html">TML</a>
 
-<a name="html_syntax">
-### 语法
-</a>
+### <a name="html_syntax">语法</a>
 
 * 缩进使用4个空格；
 * 嵌套的标签应该缩进；
@@ -95,9 +91,7 @@
 </html>
 ```
 
-<a name="html_doctype">
-### HTML5 doctype
-</a>
+### <a name="html_doctype">HTML5 doctype</a>
 
 在页面开头使用这个简单的doctype来启用标准模式，使其在每个浏览器中尽可能有一致的展现；<br />
 虽然doctype不区分大小写，但是按照惯例，doctype大写。
@@ -109,9 +103,7 @@
 </html>
 ```
 
-<a name="html_lang">
-### lang属性
-</a>
+### <a name="html_lang">lang属性</a>
 
 根据HTML5规范：
 >应在html标签上加上lang属性。这会给语音工具和翻译工具以帮助，告诉它们应当怎么去发音和翻译。
@@ -125,9 +117,7 @@
 </html>
 ```
 
-<a name="html_charset">
-### 字符编码
-</a>
+### <a name="html_charset">字符编码</a>
 
 通过明确声明字符编码，能够确保浏览器快速并容易的判断页面内容的渲染方式。这样做的好处是，可以避免在 HTML 中使用字符实体标记（character entity），从而全部与文档编码一致（一般采用 UTF-8 编码）。
 
@@ -137,9 +127,7 @@
 </head>
 ```
 
-<a name="html_meta">
-### meta标签
-</a>
+### <a name="html_meta">meta标签</a>
 
 * IE兼容模式<br />
 	IE 支持通过特定的```<meta>```标签来确定绘制当前页面所应该采用的 IE 版本。除非有强烈的特殊需求，否则最好是设置为 edge mode，从而通知 IE 采用其所支持的最新的模式。如果你想要了解更多，请点击[这里](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)；不同doctype在不同浏览器下会触发不同的渲染模式（[这篇文章](https://hsivonen.fi/doctype/)总结的很到位）。
@@ -155,9 +143,7 @@
 </head> 
 ```
 
-<a name="html_importJSCSS">
-### 引入CSS, JS
-</a>
+### <a name="html_importJSCSS">引入CSS, JS</a>
 
 根据HTML5规范, 通常在引入CSS和JS时不需要指明```type```，因为```text/css```和 ```text/javascript```分别是他们的默认值。
 HTML5 规范链接
@@ -184,9 +170,7 @@ HTML5 规范链接
 </script>
 ```
 
-<a name="html_attrOrder">
-### 属性顺序
-</a>
+### <a name="html_attrOrder">属性顺序</a>
 
 属性应该按照特定的顺序出现以保证易读性；
 
@@ -210,9 +194,7 @@ id更加具体且应该尽量少使用，所以将它放在第二位。
 <img src="..." alt="...">
 ```
 
-<a name="html_booleanAttr">
-### boolean属性
-</a>
+### <a name="html_booleanAttr">boolean属性</a>
 
 boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；<br />
 
@@ -230,9 +212,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 </select>
 ```
 
-<a name="html_reduceTagsCount">
-### 减少标签数量
-</a>
+### <a name="html_reduceTagsCount">减少标签数量</a>
 
 * 在编写HTML代码时，需要尽量避免多余的父节点；
 
@@ -280,9 +260,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 很多时候，需要通过迭代和重构来使HTML变得更少。
 
-<a name="html_nestTagCorrectly">
-### 正确嵌套标签
-</a>
+### <a name="html_nestTagCorrectly">正确嵌套标签</a>
 
 标签应该被正确的嵌套：
 
@@ -307,9 +285,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 </span>
 ```
 
-<a name="html_semantic">
-### 语义化
-</a>
+### <a name="html_semantic">语义化</a>
 
 语义化的使用HTML标签，根据HTML元素的本⾝⽤途来使⽤，如列表、段落，导航栏等；<br />
 另外也要注意相关的使用规则，比如一个页面应该只有1个h1标签;<br />
@@ -343,9 +319,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 </html>
 ```
 
-<a name="html_img">
-### 图片
-</a>
+### <a name="html_img">图片</a>
 
 * 图片元素img，需增加alt属性，这样当图片文件没有加载出来或用户有阅读障碍时，都不会影响⽤户使⽤；
 * 也需增加width，height属性，设置这些属性可以在页面加载时为图片留出空间。如果没有设置这些属性，当图片加载时，页面的布局就会发生变化。但是，仍然需要额外设置图片元素css的height和width属性，如果不设置，当图片链接失效时，图片并不会占据你在标签中声明的大小区域，从而出现布局的混乱。
@@ -358,9 +332,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <img class="logo" src="..." alt="logo" width="40px" height="40px" />
 ```
 
-<a name="html_formItem">
-### 表单
-</a>
+### <a name="html_formItem">表单</a>
 
 * 如果表单元素有对应的文本说明，请将表单元素与label标签结合使用，用label标签的```for```属性关联表单元素的```id```，这样当点击label标签时，对应的表单元素也同样获得焦点，以提升用户体验。
 
@@ -402,26 +374,18 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 	</form>
 	```
 
-<a name="html_jsCreatsTag">
-### JS生成标签
-</a>
+### <a name="html_jsCreatsTag">JS生成标签</a>
 
 在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
 
-<a name="cl">
-## CSS/LESS
-</a>
+## C<a name="cl">SS/LESS</a>
 
-<a name="cl_indent">
-### 缩进
-</a>
+### <a name="cl_indent">缩进</a>
 
 缩进使用4个空格。
 
-<a name="cl_semicolon">
-### 分号
-</a>
+### <a name="cl_semicolon">分号</a>
 
 每个属性声明末尾都要加分号。
 
@@ -431,9 +395,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 }
 ```
 
-<a name="cl_blankSpace">
-### 空格
-</a>
+### <a name="cl_blankSpace">空格</a>
 
 以下几种情况不需要空格：
 
@@ -496,9 +458,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 }
 ```
 
-<a name="cl_blankLine">
-### 空行
-</a>
+### <a name="cl_blankLine">空行</a>
 
 以下几种情况需要空行：
 
@@ -532,9 +492,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 }
 ```
 
-<a name="cl_newline">
-### 换行
-</a>
+### <a name="cl_newline">换行</a>
 
 以下几种情况不需要换行：
 
@@ -571,9 +529,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 ```
 
-<a name="cl_quotes">
-### 引号
-</a>
+### <a name="cl_quotes">引号</a>
 
 * 最外层统一使用双引号
 * url的内容不需要用引号
@@ -590,9 +546,7 @@ li[data-type="single"] {
 }
 ```
 
-<a name="cl_named">
-### 命名
-</a>
+### <a name="cl_named">命名</a>
 
 * 类名采用小写字母，以下划线分隔
 * less中的混合样式采用小写字母，以中划线分隔
@@ -620,9 +574,7 @@ li[data-type="single"] {
 }
 ```
 
-<a name="cl_attrOrder">
-### 属性声明顺序
-</a>
+### <a name="cl_attrOrder">属性声明顺序</a>
 
 相关的属性声明应当归为一组，并按照下面的顺序排列：
 
@@ -666,9 +618,7 @@ li[data-type="single"] {
 }
 ```
 
-<a name="cl_prefixAttr">
-### 带前缀的属性
-</a>
+### <a name="cl_prefixAttr">带前缀的属性</a>
 
 <s>当使用特定厂商的带有前缀的属性时，通过缩进的方式，让每个属性的值在垂直方向对齐，这样便于多行编辑;<br />
 	另外无前缀的标准属性应该写在有前缀的属性后面。</s>
@@ -681,9 +631,7 @@ li[data-type="single"] {
 }
 ```
 
-<a name="cl_color">
-### 颜色
-</a>
+### <a name="cl_color">颜色</a>
 
 <s>颜色16进制用小写字母；</s><br />
 颜色16进制尽量用简写。
@@ -702,9 +650,7 @@ li[data-type="single"] {
 }
 ```
 
-<a name="cl_shortAttr">
-### 属性简写
-</a>
+### <a name="cl_shortAttr">属性简写</a>
 
 属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，另外分开写有助于样式的组合，所以建议尽量分开声明会更加清晰；<br />
 margin，padding，border在大多数的情况下推荐使用简写，但是也不要滥用。
@@ -734,9 +680,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 
 ```
 
-<a name="cl_media">
-### 媒体查询
-</a>
+### <a name="cl_media">媒体查询</a>
 
 尽量将媒体查询的规则统一放在在文档的最底部，如果规则较少可以将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，这样做只会让大家以后更容易忘记他们。
 
@@ -760,9 +704,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 }
 ```
 
-<a name="cl_less">
-###LESS相关
-</a>
+###L<a name="cl_less">ESS相关</a>
 
 <s>声明顺序：</s>
 	1. 引入文件
@@ -790,9 +732,7 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 }
 ```
 
-<a name="cl_other">
-### 其他
-</a>
+### <a name="cl_other">其他</a>
 
 * 不允许有空的规则；
 * <s>去掉小数点前面的0</s>；
@@ -804,19 +744,13 @@ margin，padding，border在大多数的情况下推荐使用简写，但是也�
 * 尽量不使用`!important`;
 * 尽量不要同时使用reset.css和normalize.css。
 
-<a name="js">
-## JavaScript
-</a>
+## J<a name="js">avaScript</a>
 
-<a name="js_indent">
-### 缩进
-</a>
+### <a name="js_indent">缩进</a>
 
 缩进使用4个空格。
 
-<a name="js_semicolon">
-### 分号
-</a>
+### <a name="js_semicolon">分号</a>
 
 语句必须以分号结尾，这样可以避免语法错误和压缩错误，而且解析器也不必再分析语句为其添加分号从而提高了性能。
 
@@ -826,9 +760,7 @@ if (x < y) {
 } 
 ```
 
-<a name="js_blankSpace">
-### 空格
-</a>
+### <a name="js_blankSpace">空格</a>
 
 以下几种情况不需要空格：
 
@@ -953,9 +885,7 @@ if (x < y) {
 	}
 	```
 
-<a name="js_blankLine">
-### 空行
-</a>
+### <a name="js_blankLine">空行</a>
 
 以下几种情况需要空行：
 
@@ -963,9 +893,7 @@ if (x < y) {
 * 代码块后（在函数调用、数组、对象中则无需空行）
 * 文件最后保留一个空行([原因](http://segmentfault.com/q/1010000000614237/a-1020000000614285))
 
-<a name="js_newline">
-### 换行
-</a>
+### <a name="js_newline">换行</a>
 
 * 行末有';'时需要换行
 * 行末有','或者运算符时可以换行
@@ -975,9 +903,7 @@ var a = 1,
     b = 2;
 ```
 
-<a name="js_quotes">	
-### 引号
-</a>
+### <a name="js_quotes">	引号</a>
 
 最外层统一使用单引号。
 
@@ -986,9 +912,7 @@ var y = 'foo',
     z = '<div id="test"></div>';
 ```
 
-<a name="js_named">
-### 命名
-</a>
+### <a name="js_named">命名</a>
 
 * 标准变量采用驼峰式命名
 * 常量全大写，用下划线连接
@@ -1007,9 +931,7 @@ function Person(name) {
 var $body = $("body");
 ```
 
-<a name="js_singleLineComment">
-### 单行注释
-</a>
+### <a name="js_singleLineComment">单行注释</a>
 
 * 双斜线后，必须跟一个空格；
 * 缩进与下一行代码保持一致；
@@ -1024,9 +946,7 @@ if (condition) {
 var zhangsan = 'zhangsan'; // one space after code
 ```
 
-<a name="js_multiLineComment">
-### 多行注释
-</a>
+### <a name="js_multiLineComment">多行注释</a>
 
 最少三行，`*`后跟一个空格，建议在以下情况下使用：
 
@@ -1042,9 +962,7 @@ var zhangsan = 'zhangsan'; // one space after code
 var x = 1;
 ```
 
-<a name="js_documentComment">
-### 文档注释
-</a>
+### <a name="js_documentComment">文档注释</a>
 
 各类标签@param, @method等请参考[usejsdoc](http://usejsdoc.org/)和[JSDoc Guide](http://yuri4ever.github.io/jsdoc/)，建议在以下情况下使用：
 
@@ -1072,9 +990,7 @@ function foo(a, b, c, d, g, j) {
 }
 ```
 
-<a name="js_function">
-### 函数
-</a>
+### <a name="js_function">函数</a>
 
 * 无论是函数声明还是函数表达式，'('前不要空格，但'{'前一定要有空格；
 * 函数调用括号前不需要空格；
@@ -1129,9 +1045,7 @@ var doSomething = function(a, b, c) {
 };
 ```
 
-<a name="js_arrObj">
-### 数组、对象
-</a>
+### <a name="js_arrObj">数组、对象</a>
 
 * 对象属性名不需要加引号；
 * 数组、对象最后不要有逗号。
@@ -1158,9 +1072,7 @@ var a = {
 };
 ```
 
-<a name="js_bracket">
-### 括号
-</a>
+### <a name="js_bracket">括号</a>
 
 下列关键字后必须有大括号（即使代码块的内容只有一行）：if, else, for, while, do, switch, try, catch, finally, with。
 
@@ -1175,9 +1087,7 @@ if (condition) {
 }
 ```
 
-<a name="js_null">
-### null
-</a>
+### <a name="js_null">null</a>
 
 适用场景：
 
@@ -1214,9 +1124,7 @@ if (a === null) {
 }
 ```
 
-<a name="js_undefined">
-### undefined
-</a>
+### <a name="js_undefined">undefined</a>
 
 * 永远不要直接使用undefined进行变量判断
 * 使用typeof和字符串'undefined'对变量进行判断
@@ -1233,9 +1141,7 @@ if (typeof person === 'undefined') {
 }
 ```
 
-<a name="js_other">
-### 其他
-</a>
+### <a name="js_other">其他</a>
 
 * 用'===', '!=='代替'==', '!='；
 
@@ -1347,13 +1253,9 @@ if (typeof person === 'undefined') {
 	```
 
 
-<a name="mobile">
-## 移动端相关
-</a>
+## 移<a name="mobile">动端相关</a>
 
-<a name="mobile_meta">
-### meta
-</a>
+### <a name="mobile_meta">meta</a>
 
 建议移动端head使用如下meta设置
 
@@ -1381,9 +1283,7 @@ if (typeof person === 'undefined') {
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
-<a name="mobile_css">
-### CSS
-</a>
+### <a name="mobile_css">CSS</a>
 
 * 字体设置
 

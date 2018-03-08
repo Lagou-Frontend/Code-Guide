@@ -801,6 +801,11 @@ if (x < y) {
 	```javascript
 	var a = (b + c) * 100;
 	```
+* 数组的'['后和']'前
+
+		```javascript
+		var a = [1, 2, 3];
+		```
 
 以下几种情况需要空格：
 
@@ -821,12 +826,7 @@ if (x < y) {
 			
 	}
 	```
-* 数组的'['后和']'前
-
-	```javascript
-	var a = [ 1, 2, 3 ];
-	```
-* 对象的'{'后和'}'前
+* <s>对象的'{'后和'}'前</s>
 
 	```javascript
 	var a = { b: 1 };
@@ -843,7 +843,7 @@ if (x < y) {
 	```javascript
 	try {
 	
-	} catch(e) {	
+	} catch (e) {	
 	
 	}
 	```
@@ -994,7 +994,7 @@ function foo(a, b, c, d, g, j) {
 * 无论是函数声明还是函数表达式，'('前不要空格，但'{'前一定要有空格；
 * 函数调用括号前不需要空格；
 * 立即执行函数外必须包一层括号；
-* 不要给inline function命名；
+* <s>不要给inline function命名</s>；
 * 参数之间用', '分隔，注意逗号后有一个空格。
 
 ```javascript
@@ -1019,24 +1019,24 @@ doSomething(item);
 })();
 
 // not good
-[ 1, 2 ].forEach(function x() {
-    ...
-});
+// [ 1, 2 ].forEach(function x() {
+//     ...
+// });
 
 // good
-[ 1, 2 ].forEach(function() {
-    ...
-});
+// [ 1, 2 ].forEach(function() {
+//     ...
+// });
 
 // not good
-var a = [ 1, 2, function a() {
-    ...
-} ];
+// var a = [ 1, 2, function a() {
+//     ...
+// } ];
 
 // good
-var a = [ 1, 2, function() {
-    ...
-} ];
+// var a = [ 1, 2, function() {
+//     ...
+// } ];
 
 // use ', ' between function parameters
 var doSomething = function(a, b, c) {
@@ -1046,7 +1046,7 @@ var doSomething = function(a, b, c) {
 
 ### <a name="js_arrObj">数组、对象</a>
 
-* 对象属性名不需要加引号；
+* 对象属性名非必要情况下不需要加引号；
 * 数组、对象最后不要有逗号。
 
 ```javascript
@@ -1086,7 +1086,7 @@ if (condition) {
 }
 ```
 
-### <a name="js_null">null</a>
+### <a name="js_null">null（推荐）</a>
 
 适用场景：
 
@@ -1130,7 +1130,7 @@ if (a === null) {
 
 ```javascript
 // not good
-if (person === undefined) {
+if (person === undefined) { // Uncaught ReferenceError: person is not defined
     ...
 }
 
@@ -1185,7 +1185,7 @@ if (typeof person === 'undefined') {
 	```
 * 不要使用未声明的变量
 * 不要声明了变量却不使用；
-* 不要在应该做比较的地方做赋值；
+* 不要在应该做比较的地方做赋值（推荐）；
 
  	```javascript
  	// not good
@@ -1193,13 +1193,13 @@ if (typeof person === 'undefined') {
 	    a++;
 	}
 	```
-* 数组中不要存在空元素；
+* 数组中不要存在空元素（推荐）；
 
  	```javascript
  	// not good
 	var a = [1, , , 2, 3];
 	```
-* 不要在循环内部声明函数；
+* 不要在循环内部声明函数（推荐）；
 
 	```javascript
 	// not good
@@ -1214,7 +1214,7 @@ if (typeof person === 'undefined') {
 	}
 	```
 	
-* switch的falling through和no default的情况一定要有注释特别说明；
+* switch的falling through和no default的情况一定要有注释特别说明（推荐）；
 
 	```javascript
 	// good
@@ -1244,7 +1244,6 @@ if (typeof person === 'undefined') {
 * 不要使用浮点数进行计算
 
 	```javascript
-	
 	// not good
 	var a = 0.1,
 	    b = 0.2;
@@ -1270,13 +1269,13 @@ if (typeof person === 'undefined') {
 <meta name="format-detection" content="telephone=no, email=no" />
 ```
 
-* iOS隐藏工具栏和菜单栏
+* iOS隐藏工具栏和菜单栏（已过时）
 
 ```
 <meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
-* iOS顶部状态栏(手机信号、时间、电池)的背景颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）
+* iOS顶部状态栏(手机信号、时间、电池)的背景颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）（已过时）
 
 ```
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -1284,7 +1283,7 @@ if (typeof person === 'undefined') {
 
 ### <a name="mobile_css">CSS</a>
 
-* 字体设置
+* 字体设置（推荐）
 
 ```
 body { 
@@ -1292,12 +1291,11 @@ body {
 }
 ```
 
-* 盒模型
+* 盒模型（推荐）
 
 ```
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 ```
@@ -1307,7 +1305,6 @@ body {
 ```
 E {
     -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
 }
 ```
 P.S. 本条及以下的E均代表选择器
@@ -1317,8 +1314,6 @@ P.S. 本条及以下的E均代表选择器
 ```
 E {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
      user-select: none;
 }
 ```
